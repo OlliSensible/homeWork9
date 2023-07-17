@@ -2,14 +2,14 @@ package MyQueue;
 
 import MyLinkedList.MyLinkedList;
 
-public class MyQueue {
-    private MyLinkedList list;
+public class MyQueue<T> {
+    private MyLinkedList<T> list;
 
     public MyQueue() {
-        list = new MyLinkedList();
+        list = new MyLinkedList<>();
     }
 
-    public void add(Object value) {
+    public void add(T value) {
         list.add(value);
     }
 
@@ -21,18 +21,18 @@ public class MyQueue {
         return list.size();
     }
 
-    public Object peek() {
+    public T peek() {
         if (list.size() == 0) {
             throw new IllegalStateException("Queue is empty.");
         }
         return list.get(0);
     }
 
-    public Object poll() {
+    public T poll() {
         if (list.size() == 0) {
             throw new IllegalStateException("Queue is empty.");
         }
-        Object firstElement = list.get(0);
+        T firstElement = list.get(0);
         list.remove(0);
         return firstElement;
     }

@@ -1,8 +1,8 @@
 package MyLinkedList;
 
-public class MyLinkedList {
-    private Node head;
-    private Node tail;
+public class MyLinkedList<T> {
+    private Node<T> head;
+    private Node<T> tail;
     private int size;
 
     public MyLinkedList() {
@@ -11,8 +11,8 @@ public class MyLinkedList {
         size = 0;
     }
 
-    public void add(Object value) {
-        Node newNode = new Node(value);
+    public void add(T value) {
+        Node<T> newNode = new Node<>(value);
         if (size == 0) {
             head = newNode;
             tail = newNode;
@@ -25,23 +25,19 @@ public class MyLinkedList {
     }
 
     public void remove(int index) {
-        if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException();
-        }
-        Node currentNode = getNode(index);
-        Node prevNode = currentNode.prev;
-        Node nextNode = currentNode.next;
+        checkIndex(index);
+        Node<T> nodeToRemove = getNode(index);
 
-        if (prevNode != null) {
-            prevNode.next = nextNode;
+        if (nodeToRemove.prev != null) {
+            nodeToRemove.prev.next = nodeToRemove.next;
         } else {
-            head = nextNode;
+            head = nodeToRemove.next;
         }
 
-        if (nextNode != null) {
-            nextNode.prev = prevNode;
+        if (nodeToRemove.next != null) {
+            nodeToRemove.next.prev = nodeToRemove.prev;
         } else {
-            tail = prevNode;
+            tail = nodeToRemove.prev;
         }
 
         size--;
@@ -57,32 +53,35 @@ public class MyLinkedList {
         return size;
     }
 
-    public Object get(int index) {
-        if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException();
-        }
-        Node node = getNode(index);
+    public T get(int index) {
+        checkIndex(index);
+        Node<T> node = getNode(index);
         return node.value;
     }
 
-    private Node getNode(int index) {
-        Node currentNode = head;
+    private void checkIndex(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
+    }
+
+    private Node<T> getNode(int index) {
+        Node<T> currentNode = head;
         for (int i = 0; i < index; i++) {
             currentNode = currentNode.next;
         }
         return currentNode;
     }
 
-    private class Node {
-        private Object value;
-        private Node prev;
-        private Node next;
+    private static class Node<T> {
+        private T value;
+        private Node<T> prev;
+        private Node<T> next;
 
-        public Node(Object value) {
+        public Node(T value) {
             this.value = value;
             prev = null;
             next = null;
         }
     }
 }
-

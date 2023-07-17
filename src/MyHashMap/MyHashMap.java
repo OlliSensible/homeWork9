@@ -2,9 +2,9 @@ package MyHashMap;
 
 import MyLinkedList.MyLinkedList;
 
-public class MyHashMap {
+public class MyHashMap<K, V> {
     private static final int DEFAULT_CAPACITY = 16;
-    private MyLinkedList[] buckets;
+    private MyLinkedList<Entry<K, V>>[] buckets;
     private int size;
 
     public MyHashMap() {
@@ -12,37 +12,41 @@ public class MyHashMap {
         size = 0;
     }
 
-    private int getBucketIndex(Object key) {
+    private int getBucketIndex(K key) {
         int hashCode = key.hashCode();
         return Math.abs(hashCode) % buckets.length;
     }
 
-    public void put(Object key, Object value) {
+    public void put(K key, V value) {
         int index = getBucketIndex(key);
         if (buckets[index] == null) {
-            buckets[index] = new MyLinkedList();
+            buckets[index] = new MyLinkedList<>();
         }
 
-        MyLinkedList bucket = buckets[index];
+        MyLinkedList<Entry<K, V>> bucket = buckets[index];
         for (int i = 0; i < bucket.size(); i++) {
-            Node node = (Node) bucket.get(i);
-            if (node.key.equals(key)) {
-                node.value = value;
+            Entry<K, V> entry = bucket.get(i);
+            if (entry.key.equals(key)) {
+                entry.value = value;
                 return;
             }
         }
 
-        bucket.add(new Node(key, value));
+        bucket.add(new Entry<>(key, value));
         size++;
+
+        if (size == buckets.length) {
+            resizeBuckets();
+        }
     }
 
-    public void remove(Object key) {
+    public void remove(K key) {
         int index = getBucketIndex(key);
-        MyLinkedList bucket = buckets[index];
+        MyLinkedList<Entry<K, V>> bucket = buckets[index];
         if (bucket != null) {
             for (int i = 0; i < bucket.size(); i++) {
-                Node node = (Node) bucket.get(i);
-                if (node.key.equals(key)) {
+                Entry<K, V> entry = bucket.get(i);
+                if (entry.key.equals(key)) {
                     bucket.remove(i);
                     size--;
                     return;
@@ -52,11 +56,7 @@ public class MyHashMap {
     }
 
     public void clear() {
-        for (int i = 0; i < buckets.length; i++) {
-            if (buckets[i] != null) {
-                buckets[i].clear();
-            }
-        }
+        buckets = new MyLinkedList[DEFAULT_CAPACITY];
         size = 0;
     }
 
@@ -64,25 +64,46 @@ public class MyHashMap {
         return size;
     }
 
-    public Object get(Object key) {
+    public V get(K key) {
         int index = getBucketIndex(key);
-        MyLinkedList bucket = buckets[index];
+        MyLinkedList<Entry<K, V>> bucket = buckets[index];
         if (bucket != null) {
             for (int i = 0; i < bucket.size(); i++) {
-                Node node = (Node) bucket.get(i);
-                if (node.key.equals(key)) {
-                    return node.value;
+                Entry<K, V> entry = bucket.get(i);
+                if (entry.key.equals(key)) {
+                    return entry.value;
                 }
             }
         }
         return null;
     }
 
-    private static class Node {
-        private Object key;
-        private Object value;
+    private void resizeBuckets() {
+        int newCapacity = buckets.length * 2;
+        MyLinkedList<Entry<K, V>>[] newBuckets = new MyLinkedList[newCapacity];
 
-        public Node(Object key, Object value) {
+        for (MyLinkedList<Entry<K, V>> bucket : buckets) {
+            if (bucket != null) {
+                for (int i = 0; i < bucket.size(); i++) {
+                    Entry<K, V> entry = bucket.get(i);
+                    int newIndex = getBucketIndex(entry.key);
+
+                    if (newBuckets[newIndex] == null) {
+                        newBuckets[newIndex] = new MyLinkedList<>();
+                    }
+                    newBuckets[newIndex].add(entry);
+                }
+            }
+        }
+
+        buckets = newBuckets;
+    }
+
+    private static class Entry<K, V> {
+        private K key;
+        private V value;
+
+        public Entry(K key, V value) {
             this.key = key;
             this.value = value;
         }

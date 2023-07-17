@@ -2,14 +2,14 @@ package MyStack;
 
 import MyArrayList.MyArrayList;
 
-public class MyStack {
-    private MyArrayList list;
+public class MyStack<T> {
+    private MyArrayList<T> list;
 
     public MyStack() {
-        list = new MyArrayList();
+        list = new MyArrayList<>();
     }
 
-    public void push(Object value) {
+    public void push(T value) {
         list.add(value);
     }
 
@@ -25,18 +25,18 @@ public class MyStack {
         return list.size();
     }
 
-    public Object peek() {
+    public T peek() {
         if (list.size() == 0) {
             throw new IllegalStateException("Stack is empty.");
         }
         return list.get(list.size() - 1);
     }
 
-    public Object pop() {
+    public T pop() {
         if (list.size() == 0) {
             throw new IllegalStateException("Stack is empty.");
         }
-        Object lastElement = list.get(list.size() - 1);
+        T lastElement = list.get(list.size() - 1);
         list.remove(list.size() - 1);
         return lastElement;
     }

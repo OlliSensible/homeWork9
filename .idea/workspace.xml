@@ -4,24 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a470a81-602d-4302-aaf4-39c06cdff778" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homeWork9.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyArrayList/MyArrayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyArrayList/MyArrayListTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyHashMap/MyHashMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyHashMap/MyHashMapTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyLinkedList/MyLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyLinkedList/MyLinkedListTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyQueue/MyQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyQueue/MyQueueTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyStack/MyStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyStack/MyStackTest.java" afterDir="false" />
+    <list default="true" id="6a470a81-602d-4302-aaf4-39c06cdff778" name="Changes" comment="https://github.com/OlliSensible">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/homeWork9/MyArrayList/MyArrayList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/homeWork9/MyArrayList/MyArrayList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/homeWork9/MyHashMap/MyHashMap$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/homeWork9/MyHashMap/MyHashMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/homeWork9/MyHashMap/MyHashMap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/homeWork9/MyLinkedList/MyLinkedList$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/homeWork9/MyLinkedList/MyLinkedList$Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/homeWork9/MyLinkedList/MyLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/homeWork9/MyLinkedList/MyLinkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/homeWork9/MyQueue/MyQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/homeWork9/MyQueue/MyQueue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/homeWork9/MyStack/MyStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/homeWork9/MyStack/MyStack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyArrayList/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyArrayList/MyArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyHashMap/MyHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyHashMap/MyHashMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyLinkedList/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyLinkedList/MyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyQueue/MyQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyQueue/MyQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyStack/MyStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyStack/MyStack.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,13 +43,14 @@
     <option name="showMembers" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -63,6 +60,43 @@
       <option name="presentableId" value="Default" />
       <updated>1689412538265</updated>
     </task>
+    <task id="LOCAL-00001" summary="https://github.com/OlliSensible">
+      <created>1689493927714</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1689493927715</updated>
+    </task>
+    <task id="LOCAL-00002" summary="https://github.com/OlliSensible">
+      <created>1689493943525</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1689493943525</updated>
+    </task>
+    <task id="LOCAL-00003" summary="https://github.com/OlliSensible">
+      <created>1689493947984</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1689493947985</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="https://github.com/OlliSensible" />
+    <option name="LAST_COMMIT_MESSAGE" value="https://github.com/OlliSensible" />
   </component>
 </project>
