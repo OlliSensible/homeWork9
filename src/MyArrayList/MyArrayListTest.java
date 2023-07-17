@@ -2,7 +2,7 @@ package MyArrayList;
 
 public class MyArrayListTest {
     public static void main(String[] args) {
-        MyArrayList list = new MyArrayList();
+        MyArrayList <String> list = new MyArrayList<String>();
 
         // Check adding elements + check if it can have more than 10 elements
         for (int i = 0; i < 15; i++) {

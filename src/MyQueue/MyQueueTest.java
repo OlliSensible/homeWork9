@@ -2,7 +2,7 @@ package MyQueue;
 
 public class MyQueueTest {
     public static void main(String[] args) {
-        MyQueue queue = new MyQueue();
+        MyQueue<String> queue = new MyQueue<String>();
 
         // Check adding elements to the queue
         for (int i = 0; i < 15; i++) {

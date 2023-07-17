@@ -2,7 +2,7 @@ package MyLinkedList;
 
 public class MyLinkedListTest {
     public static void main(String[] args) {
-        MyLinkedList list = new MyLinkedList();
+        MyLinkedList<String> list = new MyLinkedList<String>();
 
         // Check adding elements
         for (int i = 0; i < 15; i++) {

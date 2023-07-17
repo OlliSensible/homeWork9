@@ -6,7 +6,7 @@ public class MyQueue<T> {
     private MyLinkedList<T> list;
 
     public MyQueue() {
-        list = new MyLinkedList<>();
+        list = new MyLinkedList<T>();
     }
 
     public void add(T value) {

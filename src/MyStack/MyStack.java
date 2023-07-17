@@ -2,11 +2,13 @@ package MyStack;
 
 import MyArrayList.MyArrayList;
 
+import java.util.Map;
+
 public class MyStack<T> {
     private MyArrayList<T> list;
 
     public MyStack() {
-        list = new MyArrayList<>();
+        list = new MyArrayList<T>();
     }
 
     public void push(T value) {

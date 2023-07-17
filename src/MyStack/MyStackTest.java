@@ -2,7 +2,7 @@ package MyStack;
 
 public class MyStackTest {
     public static void main(String[] args) {
-        MyStack stack = new MyStack();
+        MyStack<String> stack = new MyStack<String>();
 
         // Check adding elements to the stack
         for (int i = 0; i < 15; i++) {

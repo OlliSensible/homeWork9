@@ -20,7 +20,7 @@ public class MyHashMap<K, V> {
     public void put(K key, V value) {
         int index = getBucketIndex(key);
         if (buckets[index] == null) {
-            buckets[index] = new MyLinkedList<>();
+            buckets[index] = new MyLinkedList<Entry<K, V>>();
         }
 
         MyLinkedList<Entry<K, V>> bucket = buckets[index];
@@ -89,7 +89,7 @@ public class MyHashMap<K, V> {
                     int newIndex = getBucketIndex(entry.key);
 
                     if (newBuckets[newIndex] == null) {
-                        newBuckets[newIndex] = new MyLinkedList<>();
+                        newBuckets[newIndex] = new MyLinkedList<Entry<K, V>>();
                     }
                     newBuckets[newIndex].add(entry);
                 }
